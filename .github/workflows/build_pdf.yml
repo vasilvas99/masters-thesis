@@ -22,7 +22,7 @@ jobs:
         run: pip3 install Pygments
         
       - name: Build PDF
-        run: latexmk
+        run: latexmk && latexmk && latexmk
         
       - name: Upload PDF
         uses: actions/upload-artifact@v3
