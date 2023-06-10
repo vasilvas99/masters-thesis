@@ -20,7 +20,7 @@ git clone https://github.com/vasilvas99/masters-thesis thesis
 cd thesis
 
 # build
-latexmk & latexmk & latexmk 
+latexmk && latexmk && latexmk
 
 # output is main.pdf
 ```
