@@ -15,8 +15,8 @@ jobs:
 
     - name: Install python3 tools
       run: |
-        sudo apt-get update
-        sudo apt-get install -y --no-install-recommends python3 python3-pip python3-pexpect pylint 
+        apt-get update
+        apt-get install -y --no-install-recommends python3 python3-pip python3-pexpect pylint 
         
       - name: Install pygments
         run: pip3 install Pygments
