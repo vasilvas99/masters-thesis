@@ -1,0 +1,27 @@
+name: build-pdf
+on:
+  workflow_dispatch:
+  workflow_call:
+  push:
+    branches: [ main ]
+jobs:
+  container-build-pdf:
+    runs-on: ubuntu-latest
+    container:
+      image: thomasweise/docker-texlive-full:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+    
+      - name: Install pygments
+        run: pip3 install Pygments
+        
+      - name: Build PDF
+        run: latexmk
+        
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with: 
+          name: main.pdf
+          if-no-files-found: error
+          path: main.pdf

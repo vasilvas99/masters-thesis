@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage[top=5mm,includehead,headheight=63pt, left=2.5cm,bottom=2.5cm,right=2.5cm,headsep=0.3cm]{geometry} 
+\usepackage{microtype} 
+\setcounter{tocdepth}{2} %% only show sections and subsections in table of contents
+
+%%charset packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, bulgarian]{babel}
+\usepackage{textcomp}
+\usepackage{fontspec}
+\setmainfont[
+ Path = fonts/,
+ BoldFont={Veleka-Bold.otf}, 
+ ItalicFont={Veleka-Italic.otf},
+ BoldItalicFont={Veleka-BoldItalic.otf}
+ ]{Veleka-Regular.otf}
+
+%% hyperlinks
+\usepackage[breaklinks]{hyperref}
+
+
+%% bibliography settings
+\usepackage{biblatex}
+\addbibresource{bibliography.bib}
+
+%% graphics packages
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{subfig}
+\usepackage{caption}
+\graphicspath{{images/}}
+\usepackage{float}
+\usepackage{tikz}
+
+%% hyperlinks
+\usepackage{hyperref}
+
+%%other
+\usepackage[inline]{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{breqn}
+\allowdisplaybreaks
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage{tcolorbox}
+\usepackage{minted}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{diagbox}
+
+\title{Модели на кристален растеж}
+\author{Васил Василев Иванов}
+\def\VT{Доц. д-р Веселин Тончев}
+\def\vT{доц. д-р Веселин Тончев}
+\def\aDg{\alpha_{Dg}}
+\date{Април 2023}
+
+
+%header definitions
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\includegraphics[width=0.1\linewidth]{su-logo.png}}
+\chead{СОФИЙСКИ УНИВЕРСИТЕТ „Св. КЛИМЕНТ ОХРИДСКИ”\\Факултет по математика и информатика}
+\fancyfoot[C]{\ifnum\thepage<2\relax\else\thepage\fi}
+%end header definitions
+
+
+%%custom commands
+\tcbuselibrary{theorems}
+\newtcbtheorem{definition}{Дефиниция}{colback=blue!5,colframe=blue!35!black,fonttitle=\bfseries}{def}
+\makeatletter
+\newcommand\tcb@cnt@definitionautorefname{Дефиниция}
+\makeatletter
+
+\newtcbtheorem{result}{Резултат}{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{res}
+\makeatletter
+\newcommand\tcb@cnt@resultautorefname{Резултат}
+\makeatletter
+
+%% Color definitions
+\definecolor{darkgreen}{RGB}{1,127,1}
+\definecolor{wine}{RGB}{128,0,1}
+%% End Color Definitions
+
+%%Autoref language settings begin
+\renewcommand*{\figureautorefname}{Фиг.}
+\renewcommand*{\equationautorefname}{Уравн.}
+\renewcommand*{\subsectionautorefname}{Пар.}
+\renewcommand*{\tableautorefname}{Табл.}
+\renewcommand*{\subsubsectionautorefname}{\subsectionautorefname}
+\newcommand{\subfigureautorefname}{\figureautorefname}
+\renewcommand{\ALG@name}{Алгоритъм:}
+\renewcommand{\fnum@algorithm}{\fname@algorithm}
+
+%%Autoref language settings end
+
+
+\makeatletter
+\begin{document}
+\include{sections/title}
+\tableofcontents
+\include{sections/introduction}
+\include{sections/alpha_d_g}
+\include{sections/ivan_markov_investigation}
+\include{sections/tangential_growth_modelling.tex}
+\include{sections/conclusion.tex}
+\printbibliography[heading=bibintoc]
+\end{document}
