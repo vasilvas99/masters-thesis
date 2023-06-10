@@ -1,6 +1,6 @@
 # Готови артефакти
 
-Автоматично (on push) се генерира pdf документ от main клона на репозиторията. Най актуалната му версия може да бъде изтеглена от тук: [main.pdf.zip](https://nightly.link/vasilvas99/masters-thesis/workflows/build_pdf/main/main.pdf.zip)
+Автоматично (on push) се генерира pdf документ от main клона на репозиторията. Най-актуалната му версия може да бъде изтеглена от тук: [main.pdf.zip](https://nightly.link/vasilvas99/masters-thesis/workflows/build_pdf/main/main.pdf.zip)
 
 # Локална компилация
 
