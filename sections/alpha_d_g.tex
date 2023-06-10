@@ -359,7 +359,7 @@ def fit_data(dat):
 \caption{Симулирано закаляване}\label{alg:cap}
     \begin{algorithmic}[1]
     \State $p \gets p_0$ \Comment{Начално предположение}
-    \While{$k < k_{max}$} \Comment{Маскимален брой итерации $k_{max}$}
+    \While{$k < k_{max}$} \Comment{Максимален брой итерации $k_{max}$}
         \State $T \gets Temperature (k)$
         \State $p_{new} \gets Neighbour(p)$
         \If{$\mathcal{P}\left(E(p), E(p_{new}), T\right) \ge RandomUniform(0,1)$}
