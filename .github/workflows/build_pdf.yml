@@ -2,6 +2,7 @@ name: build-pdf
 on:
   workflow_dispatch:
   workflow_call:
+  push:
 jobs:
   container-build-pdf:
     runs-on: ubuntu-latest
