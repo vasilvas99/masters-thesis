@@ -84,6 +84,11 @@
 \newcommand\tcb@cnt@resultautorefname{Резултат}
 \makeatletter
 
+\newtcbtheorem{premise}{Предпоставка}{colback=brown!5,colframe=brown!35!black,fonttitle=\bfseries}{prem}
+\makeatletter
+\newcommand\tcb@cnt@premiseautorefname{Предпоставка}
+\makeatletter
+
 %% Color definitions
 \definecolor{darkgreen}{RGB}{1,127,1}
 \definecolor{wine}{RGB}{128,0,1}
@@ -111,5 +116,10 @@
 \include{sections/ivan_markov_investigation}
 \include{sections/tangential_growth_modelling.tex}
 \include{sections/conclusion.tex}
+%% Self-citations that do not appear in text but only in biblography
+\nocite{SMDGarxiv}
+\nocite{ivanmarkovpreprint}
+\nocite{MastersThesisLatexSource}
+%% Print bibliographical entry in table of contents
 \printbibliography[heading=bibintoc]
 \end{document}
