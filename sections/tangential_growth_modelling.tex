@@ -176,10 +176,12 @@
     \tau_0 &= k^{-1} \left( \frac{u}{k} \right) ^ {\frac{1-\nu}{\mu - \nu}}
 \end{align*}
 И обезразмерено диференциалното уравнение:
-\begin{equation}
-    \label{eq:non_dimenisonal_ode}
-    \frac{d X_i}{d T} = A_i + R_i
-\end{equation}
+\begin{result}{Oбезразмерен общ ОДУ модел на групиране}{ode_general}
+    \begin{equation}
+        \label{eq:non_dimenisonal_ode}
+        \frac{d X_i}{d T} = A_i + R_i
+    \end{equation}
+\end{result}
 С обезразмерено начално разстояние: $L_0 \coloneqq \frac{l_0}{\xi_0}$.
 Можем сега да получим и безразмерната форма на \autoref{eq:dimensional_scaling}.
 \begin{align*}
@@ -574,10 +576,12 @@ $2$                                       & $1/2$                    & -        
     h/f(s) & \propto t^\beta 
 \end{align*}
 Или $N \propto h/f(s)$, т.е. броят стъпала в групата е пропорционален на височината на повърхността, разделена на автомоделната функция. Този резултат е естествен и съвпада с очакванията височината да зависи от броя стъпала в дадена група. В \cite{Kozlov2022} стойностите за $\beta$ са получени от анализ на размерностите на частни случаи или от числени експерименти, а тук получихме директната връзка между параметрите на модела:
-\begin{equation}
-    \beta = \frac{{k - n + \rho  - 2}}{{2\left( { - 1 + k - n + 2\rho } \right)}}
-    \label{eq:beta_explicit}
-\end{equation}
+\begin{result}{Израз за морфологичния параметър $\beta$}{beta_rho_k_n_rel}
+    \begin{equation}
+        \beta = \frac{{k - n + \rho  - 2}}{{2\left( { - 1 + k - n + 2\rho } \right)}}
+        \label{eq:beta_explicit}
+    \end{equation}
+\end{result}
 
 Теорията на инвариантните под разтягане решения също така показва, че ако заместим автомоделното решение в основното ЧДУ, то може да бъде сведено до ОДУ за автомоделната функция $f(s)$ по отношение на автомоделната променлива $s$. За общия вид $h  = t^q f(s)$ не е получено обобщено ОДУ, но например за конкретния избор на  $k = 2, \rho  = 1, n = 2$ заместваме автомоделното решение и съкращаваме на $t^q$, получаваме следното ОДУ:
 \[\begin{gathered}
@@ -647,20 +651,20 @@ $2$                                       & $1/2$                    & -        
     \end{cases} 
 \end{equation}
 Тогава семейството инвариантни решения (при вариране на параметъра $a$) има общия вид:
-\begin{align*}
-    h &= \phi (x,t) = {t^{c/a}}f\left( {\frac{{{x^a}}}{{{t^b}}}} \right) \\
-    h &= \phi (x,t) = {t^{3/2}}f\left( {\frac{{{x^a}}}{{{t^{a/2}}}}} \right) \\
-    s &\coloneqq \frac{x^a}{t^{a/2}}
-\end{align*}
+\begin{equation}
+        h = \phi (x,t) = {t^{c/a}}f\left( {\frac{{{x^a}}}{{{t^b}}}} \right) = {t^{3/2}}f\left( {\frac{{{x^a}}}{{{t^{a/2}}}}} \right)
+\end{equation}
 Тогава, времевият скейлинг на ST ($N \propto t^\beta$) можем да дадем като:
 \begin{equation}
     N \propto \frac{h(x,t)}{f(s)} = t^{3/2}
 \end{equation}
 Обратно, можем да изследваме поведението $h/t^{3/2}$ и така при правилно построена процедура за параметрична идентификация да определим конкретната стойност на $a$ в автомоделната променлива $s_a(x,t) = x^a/t^{a/2}$. Ако изберем $a = 1$ и заместим анзаца в \autoref{eq:stoyanov_tonchev_dimensionless}:
-\begin{equation*}
-    h = \phi (x,t) = {t^{3/2}}f\left( {\frac{{{x}}}{{{t^{1/2}}}}} \right)
-\end{equation*}
-Отново получаваме ОДУ за автомоделната функция $f(s)$, където $s \coloneqq x/\sqrt{t}$:
+\begin{result}{Анзац на Family-Vicsek за ST}{st_family_viscek}
+    \begin{equation*}
+        h(x,t) = {t^{3/2}}f\left( {\frac{{{x}}}{{{\sqrt{t}}}}} \right)
+    \end{equation*}
+\end{result}
+\noindent Отново получаваме ОДУ за автомоделната функция $f(s)$, където $s \coloneqq x/\sqrt{t}$:
 \begin{align*}
     \sqrt t \left( { - \left( {s - 2{f^{(4)}}(s)} \right)f'(s) + 2\left( {3{f^{(3)}}(s) - 1} \right)f''(s) + 3f(s)} \right) = 0 \\
      2\left( {3{f^{(3)}}(s) - 1} \right)f''(s) + 3f(s) = \left( {s - 2{f^{(4)}}(s)} \right)f'(s), \quad t \ne 0 \\
