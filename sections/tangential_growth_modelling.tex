@@ -657,15 +657,17 @@ $2$                                       & $1/2$                    & -        
 \begin{equation}
     N \propto \frac{h(x,t)}{f(s)} = t^{3/2}
 \end{equation}
-Обратно, можем да изследваме поведението $h/t^{3/2}$ и така при правилно построена процедура за параметрична идентификация да определим конкретната стойност на $a$ в автомоделната променлива $s_a(x,t) = x^a/t^{a/2}$. Ако изберем $a = 1$ и заместим анзаца в \autoref{eq:stoyanov_tonchev_dimensionless}:
+Обратно, можем да изследваме поведението $h/t^{3/2}$ и така при правилно построена процедура за параметрична идентификация да определим конкретната стойност на $a$ в автомоделната променлива $s_a(x,t) \coloneqq x^a/t^{a/2}$. Ако изберем $a = 1$ и заместим анзаца в \autoref{eq:stoyanov_tonchev_dimensionless}:
 \begin{result}{Анзац на Family-Vicsek за ST}{st_family_viscek}
     \begin{equation*}
         h(x,t) = {t^{3/2}}f\left( {\frac{{{x}}}{{{\sqrt{t}}}}} \right)
     \end{equation*}
 \end{result}
 \noindent Отново получаваме ОДУ за автомоделната функция $f(s)$, където $s \coloneqq x/\sqrt{t}$:
-\begin{align*}
-    \sqrt t \left( { - \left( {s - 2{f^{(4)}}(s)} \right)f'(s) + 2\left( {3{f^{(3)}}(s) - 1} \right)f''(s) + 3f(s)} \right) = 0 \\
-     2\left( {3{f^{(3)}}(s) - 1} \right)f''(s) + 3f(s) = \left( {s - 2{f^{(4)}}(s)} \right)f'(s), \quad t \ne 0 \\
-\end{align*}
+\begin{equation*}
+        \sqrt t \left( { - \left( {s - 2{f^{(4)}}(s)} \right)f'(s) + 2\left( {3{f^{(3)}}(s) - 1} \right)f''(s) + 3f(s)} \right) = 0, \quad\quad t > 0
+\end{equation*}
+\begin{equation*}
+     2\left( {3{f^{(3)}}(s) - 1} \right)f''(s) + 3f(s) = \left( {s - 2{f^{(4)}}(s)} \right)f'(s)   
+\end{equation*}
 Пред решаването на това ОДУ стоят същите проблеми като при PTVV, основно свързани с особените начални и гранични условия на системата. Въпреки това този резултат е полезен, защото директно показва кой частен случай на PTVV е ST и дава възможност за широки изследвания за междинната асимптотика на това семейство модели.
