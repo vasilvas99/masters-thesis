@@ -34,8 +34,10 @@ jobs:
           if-no-files-found: error
           path: main.pdf
     
-      - name: Upload release
-        uses: softprops/action-gh-release@v1
+      - uses: svenstaro/upload-release-action@v2
         with:
-          fail_on_unmatched_files: true
-          files: main.pdf
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: main.pdf
+          asset_name: main.pdf
+          tag: ${{ github.ref }}
+          overwrite: true
